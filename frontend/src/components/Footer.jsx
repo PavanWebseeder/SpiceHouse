@@ -1,4 +1,13 @@
+import { Link } from 'react-router-dom';
 const Footer = () => {
+
+  const items = [
+    { link: "Home", path: "/" },
+    { link: "Menu", path: "/menu" },
+    { link: "About Us", path: "/about" },
+    { link: "Contact Us", path: "/contact" },
+  ];
+
   return (
     <footer className="bg-gray-900 text-gray-300 mt-16">
       <div className="max-w-7xl mx-auto px-6 py-12">
@@ -26,10 +35,9 @@ const Footer = () => {
               Quick Links
             </h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="/" className="hover:text-white">Home</a></li>
-              <li><a href="/menu" className="hover:text-white">Menu</a></li>
-              <li><a href="/about" className="hover:text-white">About Us</a></li>
-              <li><a href="/contact" className="hover:text-white">Contact</a></li>
+              {items.map((item,index)=>(
+                <li key={index} className='cursor-pointer hover:text-white'><Link to={item.path}>{item.link}</Link></li>
+              ))}
             </ul>
           </div>
 
@@ -52,7 +60,6 @@ const Footer = () => {
 
         </div>
 
-        {/* Divider */}
         <div className="border-t border-gray-700 mt-10 pt-4 text-center text-sm">
           © {new Date().getFullYear()} Spice House. All rights reserved.
         </div>
