@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar"
 import Hero from '../components/Hero';
-import Intro from "../components/intro";
+import Intro from "../components/Intro";
 import Serve from "../components/Serve";
 import Amenities from "../components/Amenities";
 import Gallery from "../components/Gallery";
