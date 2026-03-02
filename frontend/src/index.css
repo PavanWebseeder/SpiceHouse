@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+
+:root {
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Poppins", sans-serif;
+}
