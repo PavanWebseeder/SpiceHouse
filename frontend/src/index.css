@@ -1,5 +1,12 @@
 @import 'tailwindcss';
 
+@theme {
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Poppins', sans-serif;
+  
+  --color-spice-brand: #ea580c; /* orange-600 */
+}
+
 :root {
   --font-heading: "Playfair Display", serif;
   --font-body: "Poppins", sans-serif;

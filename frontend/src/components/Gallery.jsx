@@ -1,6 +1,3 @@
-const food = import.meta.glob("../public/foods/*.{png,jpg,jpeg,webp}", {
-  eager: true,
-});
 const Gallery = () => {
   const images = [
     "/foods/img1.jpg",
@@ -15,23 +12,25 @@ const Gallery = () => {
   ];
 
   return (
-    <div className="mt-5">
+    <div className="mt-28 max-w-7xl mx-auto px-4">
       <h3
-        className="text-blue-500 text-center text-2xl font-bold tracking-wider"
+        className="text-amber-600 text-center text-4xl font-bold tracking-wider mb-2"
         style={{ fontFamily: "var(--font-heading)" }}
       >
         Gallery
       </h3>
-      <div className="mt-5 grid grid-cols-2 gap-4 md:grid-cols-3 max-w-7xlmx-auto">
+      <div className="w-24 h-1 bg-amber-500 mx-auto rounded mb-12"></div>
+
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 max-w-7xl mx-auto">
         {images.map((image, index) => (
           <div
             key={index}
-            className="aspect-square overflow-hidden rounded-xl"
+            className="aspect-square overflow-hidden rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300"
           >
             <img
               src={image}
               alt={`gallery-${index}`}
-              className="w-full h-full object-cover hover:scale-105 transition"
+              className="w-full h-full object-cover hover:scale-110 transition-transform duration-700 ease-in-out cursor-pointer"
               loading="lazy"
             />
           </div>
