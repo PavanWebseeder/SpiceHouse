@@ -5,6 +5,7 @@ import Serve from "../components/Serve";
 import Amenities from "../components/Amenities";
 import Gallery from "../components/Gallery";
 import Footer from "../components/Footer";
+import TodaySpecial from "../components/TodaySpecial";
 import Testimonials from "../components/Testimonials";
 const Home = () => {
     return(
@@ -13,6 +14,7 @@ const Home = () => {
             <Hero/>
             <Intro/>
             <Serve/>
+            <TodaySpecial/>
             <Amenities/>
             <Gallery/>
             <Testimonials/>
