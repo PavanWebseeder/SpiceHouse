@@ -1,6 +1,6 @@
 const ContactHero = () => {
   return (
-    <div className="relative w-screen h-[40vh] md:h-[60vh] overflow-hidden">
+    <div className="relative w-full h-[40vh] md:h-[60vh] overflow-hidden">
       <img
         src="/foods/pexels-pixabay-326278.jpg"
         className="absolute top-0 left-0 w-full h-full object-cover"

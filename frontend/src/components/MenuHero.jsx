@@ -1,9 +1,10 @@
-const AboutHero = () => {
+
+const MenuHero = () => {
   return (
     <div className="relative w-full h-[40vh] md:h-[60vh] overflow-hidden">
 
       <img
-        src="/foods/pexels-pixabay-326278.jpg"
+        src="\foods\img7.jpg"
         className="absolute top-0 left-0 w-full h-full object-cover"
         alt="About Us Hero"
       />
@@ -14,13 +15,13 @@ const AboutHero = () => {
         <h2
           className="text-5xl md:text-7xl font-bold tracking-wide drop-shadow-lg"
           style={{ fontFamily: 'var(--font-heading)' }}>
-          About Us
+          Menu
         </h2>
-        <div className="w-24 h-1 bg-amber-500 rounded mt-6"></div>
+        <div className="w-40 h-1 bg-amber-500 rounded mt-6"></div>
       </div>
 
     </div>
   );
-}
+};
 
-export default AboutHero;
+export default MenuHero;

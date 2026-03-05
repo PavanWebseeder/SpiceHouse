@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const Serve = () => {
 
     const items = [
@@ -25,13 +27,27 @@ const Serve = () => {
 
     return (
         <div className="mt-28 max-w-7xl mx-auto px-4">
-            <h2 className="text-center text-4xl font-bold text-amber-600 mb-2"
-                style={{ fontFamily: 'var(--font-heading)' }}>We Serve</h2>
-            <div className="w-24 h-1 bg-amber-500 mx-auto rounded mb-12"></div>
+            <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+            >
+                <h2 className="text-center text-4xl font-bold text-amber-600 mb-2"
+                    style={{ fontFamily: 'var(--font-heading)' }}>We Serve</h2>
+                <div className="w-24 h-1 bg-amber-500 mx-auto rounded mb-12"></div>
+            </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {items.map((item, idx) => (
-                    <div key={idx} className="flex flex-col bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer border border-orange-50">
+                    <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-50px" }}
+                        transition={{ duration: 0.5, delay: idx * 0.1 }}
+                        key={idx}
+                        className="flex flex-col bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden group cursor-pointer border border-orange-100"
+                    >
                         <div className="overflow-hidden">
                             <img src={item.image} className="w-full aspect-[4/3] object-cover group-hover:scale-110 transition-transform duration-500 ease-in-out"></img>
                         </div>
@@ -41,7 +57,7 @@ const Serve = () => {
                             <p className="text-center text-gray-500"
                                 style={{ fontFamily: 'var(--font-body)' }}>{item.description}</p>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </div>

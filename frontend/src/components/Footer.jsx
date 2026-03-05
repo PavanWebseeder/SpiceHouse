@@ -1,15 +1,17 @@
 import { Link } from 'react-router-dom';
+import { navLinks } from '../constant/Nav_config';
+import { motion } from "framer-motion";
 const Footer = () => {
 
-  const items = [
-    { link: "Home", path: "/" },
-    { link: "Menu", path: "/menu" },
-    { link: "About Us", path: "/about" },
-    { link: "Contact Us", path: "/contact" },
-  ];
 
   return (
-    <footer className="bg-slate-900 text-slate-300 mt-28 border-t border-amber-500/20">
+    <motion.footer
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+      className="bg-slate-900 text-slate-300 mt-28 border-t border-amber-500/20"
+    >
       <div className="max-w-7xl mx-auto px-6 py-16">
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
@@ -35,10 +37,9 @@ const Footer = () => {
               Quick Links
             </h4>
             <ul className="space-y-3 text-sm">
-              {items.map((item, index) => (
-                <li key={index} className='transition-transform transform hover:translate-x-1'>
+              {navLinks.map((item, index) => (
+                <li key={index} className='transition-transform transform hover:translate-x-1 '>
                   <Link to={item.path} className="hover:text-amber-500 transition-colors flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-amber-500 rounded-full"></span>
                     {item.link}
                   </Link>
                 </li>
@@ -69,7 +70,7 @@ const Footer = () => {
           © {new Date().getFullYear()} Spice House. All rights reserved.
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 

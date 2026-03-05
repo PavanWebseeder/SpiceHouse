@@ -20,11 +20,11 @@ const Amenities = () => {
                     {amenities.map((a, index) => (
                         <div key={index} className="flex flex-col items-center group cursor-pointer">
 
-                            <div className="bg-amber-100 text-amber-600 rounded-full flex items-center justify-center w-24 h-24 text-3xl group-hover:bg-amber-600 group-hover:text-white transition-all duration-500 shadow-md group-hover:shadow-xl group-hover:-translate-y-2">
+                            <div className="bg-amber-100 text-amber-600 rounded-full flex items-center justify-center w-20 h-20 md:w-24 md:h-24 text-3xl group-hover:bg-amber-600 group-hover:text-white transition-all duration-500 shadow-md group-hover:shadow-xl group-hover:-translate-y-2">
                                 {a.icon}
                             </div>
 
-                            <span className="mt-6 text-gray-700 font-medium text-lg text-center leading-tight tracking-wide group-hover:text-amber-600 transition-colors"
+                            <span className="mt-6 text-gray-700 font-medium  text-sm md:text-lg text-center leading-tight tracking-wide group-hover:text-amber-600 transition-colors"
                                 style={{ fontFamily: 'var(--font-body)' }}>{a.title}</span>
                         </div>
                     ))}
