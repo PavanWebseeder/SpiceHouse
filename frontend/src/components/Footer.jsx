@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { navLinks } from '../constant/Nav_config';
 import { motion } from "framer-motion";
+import { FaFacebookF,FaInstagram,FaXTwitter} from 'react-icons/fa6';
 const Footer = () => {
 
 
@@ -14,7 +15,7 @@ const Footer = () => {
     >
       <div className="max-w-7xl mx-auto px-6 py-16">
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
 
           <div>
             <h3
@@ -47,6 +48,7 @@ const Footer = () => {
             </ul>
           </div>
 
+
           <div>
             <h4 className="text-xl font-semibold text-white mb-6 border-b border-slate-700 pb-2 inline-block">
               Visit Us
@@ -58,11 +60,30 @@ const Footer = () => {
             </p>
 
             <p className="text-sm text-slate-400">
-              <span className="font-semibold text-amber-500">Timings:</span><br />
+              <span className=" font-semibold text-white mb-6 border-b border-slate-700 pb-2 inline-block">Timings:</span><br />
               Mon – Fri: 11:00 AM – 10:30 PM <br />
               Sat – Sun: 11:00 AM – 11:00 PM
             </p>
           </div>
+
+           <div className="text-slate-500 text-sm">
+  <h4 className="text-xl font-semibold text-white mb-6 border-b border-slate-700 pb-2 inline-block">
+    Contact Us
+  </h4>
+
+  <p className="mb-2">spicehouse@gmail.com</p>
+  <p className="mb-4">+91 1234567890</p>
+
+  <span className="font-semibold text-white border-b border-slate-700 pb-1 inline-block">
+    Follow Us
+  </span>
+
+  <div className="flex gap-4 mt-4 text-white text-lg">
+    <Link to='https://www.facebook.com'><FaFacebookF className="hover:text-amber-500 cursor-pointer transition" /></Link>
+    <Link to='https://www.instagram.com'><FaInstagram className="hover:text-amber-500 cursor-pointer transition" /></Link>
+    <Link to='https://www.x.com'><FaXTwitter className="hover:text-amber-500 cursor-pointer transition" /></Link>
+  </div>
+</div>
 
         </div>
 
